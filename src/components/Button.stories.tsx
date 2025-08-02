@@ -13,5 +13,6 @@ type Story = StoryObj<typeof Button>;
 export const Basic: Story = {
   args: {
     label: "Click me",
+    onClick: () => console.log("button-click"),
   },
 };

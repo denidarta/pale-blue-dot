@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --font-mulish: "Mulish", sans-serif;
+}
+
+.mulish {
+  font-family: var(--font-mulish);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mulish-bold {
+  font-family: var(--font-mulish);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
