@@ -20,11 +20,5 @@ export const BasicToggle: React.FC = () => {
 // Stories for LabeledToggle
 export const Labeled: React.FC = () => {
   const [checked, setChecked] = useState(false);
-  return (
-    <LabeledToggle
-      checked={checked}
-      onChange={setChecked}
-      label="Enable feature"
-    />
-  );
+  return <LabeledToggle checked={checked} onChange={setChecked} />;
 };

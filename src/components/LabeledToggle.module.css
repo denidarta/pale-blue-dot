@@ -1,0 +1,78 @@
+.labelYa {
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  user-select: none;
+  color: #ffffff;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  width: fit-content;
+  min-width: 64px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.labelTidak {
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  user-select: none;
+  color: #3f4254;
+  z-index: 2;
+  flex: 2;
+  display: flex;
+  width: fit-content;
+  min-width: 64px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.toggleContainer {
+  display: flex;
+  width: fit-content;
+  height: 32px;
+  background-color: #e4e6ef;
+  border-radius: 0.4rem;
+  position: relative;
+  transition: background-color 0.25s ease;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  z-index: 1;
+  border: 1px solid #d0d5dd;
+  overflow: hidden;
+}
+
+.checkedBackground {
+  background-color: #3699ff;
+}
+
+.toggleThumb {
+  width: 50%;
+  height: 32px;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transition: transform 0.25s ease;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #3f4254;
+}
+
+.checkedThumb {
+  transform: translateX(100%);
+}

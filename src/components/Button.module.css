@@ -1,0 +1,47 @@
+.buttonBase {
+  background-color: #3699ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Mulish", sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.buttonBase:hover {
+  background-color: #1a3b5c;
+}
+.buttonBase:disabled {
+  background-color: #efeff0;
+  cursor: not-allowed;
+  color: #b5b5c3;
+}
+
+.small {
+  height: 28px;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+
+.medium {
+  height: 32px;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+.large {
+  height: 40px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.circular {
+  border-radius: 9999px;
+}

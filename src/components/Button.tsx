@@ -1,28 +1,12 @@
 import React from "react";
+import styles from "./Button.module.css";
 
 type ButtonProps = {
   label: string;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
   size?: "small" | "medium" | "large";
   cornerRadius?: "rounded" | "circular";
-};
-
-const sizeStyles = {
-  small: {
-    height: 28,
-    fontSize: 12,
-    padding: "6px 12px",
-  },
-  medium: {
-    height: 32,
-    fontSize: 14,
-    padding: "8px 16px",
-  },
-  large: {
-    height: 40,
-    fontSize: 16,
-    padding: "10px 20px",
-  },
+  disabled?: boolean;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -30,35 +14,17 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   size = "medium",
   cornerRadius = "rounded",
+  disabled = false,
 }) => {
-  const { height, fontSize, padding } = sizeStyles[size];
-
-  // Calculate borderRadius based on cornerRadius prop
-  const borderRadius = cornerRadius === "circular" ? `${height / 2}px` : "6px";
-
   return (
     <button
-      style={{
-        backgroundColor: "#23517F",
-        color: "white",
-        height,
-        fontSize,
-        padding,
-        borderRadius,
-        border: "none",
-        cursor: "pointer",
-        transition: "background-color 0.3s ease",
-        fontFamily: '"Mulish", sans-serif',
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        userSelect: "none",
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#1a3b5c")}
-      onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#23517F")}
+      className={`${styles.buttonBase} ${styles[size]} ${
+        styles[cornerRadius]
+      } ${disabled ? styles.disabled : ""}`}
+      disabled={disabled}
       onClick={(e) => {
-        console.log("Button clicked:", label);
-        if (onClick) onClick();
+        if (disabled) return;
+        if (onClick) onClick(e);
       }}
     >
       {label}
