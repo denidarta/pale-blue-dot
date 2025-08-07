@@ -1,0 +1,65 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 4rem; /* h-16 */
+  width: 100%;
+  background-color: var(--background);
+  background-color: rgba(var(--background-rgb), 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--elevation-sm);
+  border-bottom: 1px solid var(--border);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@supports (backdrop-filter: blur(0)) {
+  .header {
+    background-color: rgba(var(--background-rgb), 0.6);
+  }
+}
+
+.container {
+  max-width: 390px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: 1.5rem;
+  width: auto;
+}
+
+.menuButton {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.menuButton:hover {
+  background-color: var(--muted-hover);
+}
+
+.menuButton:active {
+  transform: scale(0.95);
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--primary);
+}

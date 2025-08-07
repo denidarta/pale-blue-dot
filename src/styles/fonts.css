@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap");
 
 :root {
   --font-mulish: "Mulish", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
 }
 
 .mulish {
@@ -13,6 +15,20 @@
 
 .mulish-bold {
   font-family: var(--font-mulish);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: var(--font-poppins);
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;

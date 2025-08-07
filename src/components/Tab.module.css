@@ -1,0 +1,22 @@
+.tab {
+  padding: 10px 16px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+.tab:hover {
+  color: #333;
+}
+.tab:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}

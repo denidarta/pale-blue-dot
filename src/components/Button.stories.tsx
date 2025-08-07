@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react-vite";
 import React from "react";
 import { Button } from "./Button";
 
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof Button>;
 
 export const Active: Story = {
   args: {
-    label: "Click me",
+    label: "Button Example",
     disabled: false,
   },
   render: (args) => <Button {...args} />,
