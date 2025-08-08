@@ -244,4 +244,26 @@
   --tailwind-rose-800: #a50036;
   --tailwind-rose-900: #8b0836;
   --tailwind-rose-950: #4d0218;
+  --shafiq-blue-1: #FBFCFEFF;
+  --shafiq-blue-2: #DFEBF6FF;
+  --shafiq-blue-3: #B7D1EBFF;
+  --shafiq-blue-4: #8FB8E0FF;
+  --shafiq-blue-5: #679ED5FF;
+  --shafiq-blue-6: #3F85CAFF;
+  --shafiq-blue-7: #2E6BA8FF;
+  --shafiq-blue-Main: #23517FFF;
+  --shafiq-blue-9: #1E456CFF;
+  --shafiq-blue-10: #183858FF;
+  --shafiq-blue-11: #132B44FF;
+  --shafiq-gold-gold-1: #FAF4E4FF;
+  --shafiq-gold-gold-2: #F6E9C8FF;
+  --shafiq-gold-gold-3: #F1DFADFF;
+  --shafiq-gold-gold-4: #EDD491FF;
+  --shafiq-gold-gold-5: #E8C976FF;
+  --shafiq-gold-gold-6: #CCAF62FF;
+  --shafiq-gold-gold-7: #B1964DFF;
+  --shafiq-gold-gold-8: #957C39FF;
+  --shafiq-gold-gold-9: #876F2FFF;
+  --shafiq-gold-gold-10: #7A6324FF;
+  --shafiq-gold-gold-11: #5E4910FF;
 }

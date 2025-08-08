@@ -10,7 +10,6 @@ type ButtonProps = {
   size?: "small" | "medium" | "large";
   cornerRadius?: "rounded" | "circular";
   disabled?: boolean;
-
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
 };
@@ -21,6 +20,8 @@ export const Button: React.FC<ButtonProps> = ({
   size = "medium",
   cornerRadius = "rounded",
   disabled = false,
+  icon,
+  iconPosition = "left",
 }) => {
   return (
     <button
@@ -28,11 +29,16 @@ export const Button: React.FC<ButtonProps> = ({
         ${styles.buttonBase} 
         ${styles[size]} 
         ${styles[cornerRadius]} 
-        ${disabled ? styles.disabled :
-          ""}`}
+        ${disabled ? styles.disabled : ""}`}
       disabled={disabled}
       onClick={(e) => { if (disabled) return; if (onClick) onClick(e); }}>
+      {icon && iconPosition === "left" && (
+        <span className={styles.icon} style={{ marginRight: label ? 8 : 0 }}>{icon}</span>
+      )}
       {label}
+      {icon && iconPosition === "right" && (
+        <span className={styles.icon} style={{ marginLeft: label ? 8 : 0 }}>{icon}</span>
+      )}
     </button>
   );
 };

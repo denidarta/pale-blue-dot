@@ -6,11 +6,6 @@ const meta: Meta<typeof RadioButton> = {
   title: "Components/RadioButton",
   component: RadioButton,
   argTypes: {
-    labels: {
-      control: "array",
-      description: "Array of labels for radio buttons",
-      defaultValue: ["Option 1", "Option 2"],
-    },
     name: {
       control: "text",
       description: "Name attribute for radio group",
@@ -25,13 +20,13 @@ type Story = StoryObj<typeof RadioButton>;
 
 export const Default: Story = {
   args: {
-    labels: ["Female", "Male", "Other"],
     name: "Test",
     label: "dfa",
     value: "dfad",
     checked: false
   },
-  render: ({ labels, name }) => {
+  render: (args) => {
+    const labels = ["Female", "Male", "Other"];
     const [selected, setSelected] = useState(labels[0] || "");
 
     return (
@@ -40,7 +35,7 @@ export const Default: Story = {
           <RadioButton
             key={index}
             label={label}
-            name={name}
+            name={args.name}
             value={label}
             checked={selected === label}
             onChange={setSelected}

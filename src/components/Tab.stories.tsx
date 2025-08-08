@@ -1,5 +1,5 @@
 import type { Meta } from "@storybook/react";
-import React, { useState } from "react";
+import { useState } from "react";
 import Tab from "./Tab";
 
 const meta: Meta<typeof Tab> = {
