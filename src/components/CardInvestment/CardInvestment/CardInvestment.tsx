@@ -5,16 +5,20 @@ import InvestmentProgress from '../../ProgressBar/InvestmentProgress';
 
 
 type CardInvestmentProps = {
-
+    projectName: string;
+    companyName: string;
+    totalStock: number;
+    invested: number;
+    booked: number;
 }
 
 
-const CardInvestment: React.FC<CardInvestmentProps> = () => {
+const CardInvestment: React.FC<CardInvestmentProps> = ({ projectName, companyName, totalStock, invested, booked }) => {
     return (
         <div className={styles['card-container']}>
-            <h2 className={styles['card-title']}>Project Name</h2>
-            <p className={styles['company-name']}>Nama Perusahaan</p>
-            <InvestmentProgress totalStock={100} invested={60} booked={20}/>
+            <h2 className={styles['card-title']}>{projectName}</h2>
+            <p className={styles['company-name']}>{companyName}</p>
+            <InvestmentProgress totalStock={totalStock} invested={invested} booked={booked} />
         </div>
     );
 }

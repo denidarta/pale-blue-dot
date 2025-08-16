@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./styles/fonts.css";
 import InvestmentProgress from "./components/ProgressBar/InvestmentProgress";
 import NavBar from "./components/NavBar/NavBar";
+import "./styles/global.css";
 
 const margin: React.CSSProperties = {
   margin: "20px",

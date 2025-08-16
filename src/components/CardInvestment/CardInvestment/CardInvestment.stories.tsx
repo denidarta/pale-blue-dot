@@ -6,9 +6,14 @@ const meta: Meta<typeof CardInvestment> = {
     title: 'Components/CardInvestment',
     component: CardInvestment,
     tags: ['autodocs'],
-    parameters: {
-        layout: 'centered',
-    },
+    parameters: { layout: 'centered', },
+    argTypes: {
+        projectName: { control: 'text' },
+        companyName: { control: 'text' },
+        totalStock: { control: 'number' },
+        invested: { control: 'number' },
+        booked: { control: 'number' },
+    }
 };
 
 export default meta;
@@ -16,10 +21,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     args: {
-        projectName: 'Eco-Friendly Housing',
-        description: 'Invest in sustainable and affordable housing projects.',
-        totalStock: 1000,
-        invested: 450,
-        booked: 200,
+        projectName: 'Project Alpha',
+        companyName: 'Tech Innovations Inc.',
+        totalStock: 100,
+        invested: 60,
+        booked: 20,
     },
 };
