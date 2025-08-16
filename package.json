@@ -9,7 +9,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "chromatic": "npx chromatic --project-token=969b5e74f4a5"
   },
   "keywords": [],
   "author": "",

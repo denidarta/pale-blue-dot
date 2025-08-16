@@ -1,0 +1,17 @@
+.card-title{
+    font-family: 'mulish', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.card-container{
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+}
+.company-name{
+    font-family: 'mulish', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6B7280;
+    text-transform: uppercase;
+}

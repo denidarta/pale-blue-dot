@@ -15,5 +15,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {},
+    args: {
+        projectName: 'Eco-Friendly Housing',
+        description: 'Invest in sustainable and affordable housing projects.',
+        totalStock: 1000,
+        invested: 450,
+        booked: 200,
+    },
 };
